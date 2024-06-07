@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link href="../static/css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Add</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+ <div class="container mt-5">
+     <div class="card">
+         <div class="card-header bg-success text-white">
+             Add Product
+         </div>
+         <div class="card-body">
+             <form th:action="add" method="post">
+                 <div class="form-group">
+                     <label >Designation</label>
+                     <input type="text" class="form-control" name="designation">
+                 </div>
+                 <div class="form-group">
+                     <label >Prix</label>
+                     <input type="text" class="form-control" name="prix">
+                 </div>
+                 <div class="form-group">
+                     <label >Quantité</label>
+                     <input type="number" class="form-control" name="qte">
+                 </div>
+                 <input type="submit" value="add" class="btn btn-primary">
+             </form>
+         </div>
+     </div>
+ </div>
+</body>
+</html>
